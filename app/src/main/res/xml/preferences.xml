@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_header_transcript">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="dateInsteadOfTranscriptSwitch"
+            android:title="@string/dateInsteadOfTranscript" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/pref_transcripe_services_tiles"
+            android:entryValues="@array/pref_transcripe_services_values"
+            android:key="transcripe_service"
+            android:title="@string/chooseTranscripeService" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:inputType="text"
+            android:key="nuance_app_id"
+            android:title="@string/setNuanceAppId" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:inputType="text"
+            android:key="nuance_key"
+            android:title="@string/setNuanceKey" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:inputType="text"
+            android:key="google_key"
+            android:title="@string/setGoogleId" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_header_segmentation">
+        <ListPreference
+            android:defaultValue="-80"
+            android:entries="@array/pref_segmentation_dzb"
+            android:entryValues="@array/pref_segmentation_dzb"
+            android:key="segmentation_dzb"
+            android:title="@string/setTreeshold" />
+        <EditTextPreference
+            android:defaultValue="350"
+            android:inputType="number"
+            android:key="pause_for_segment"
+            android:title="@string/setPauseForSegment" />
+        <EditTextPreference
+            android:defaultValue="2000"
+            android:inputType="number"
+            android:key="minimum_duration"
+            android:title="@string/setMinimumSegmentDuration" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
